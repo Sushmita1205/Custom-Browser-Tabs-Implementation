@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Tabs with Search Bar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Project JavaScript -->
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
+</head>
+<body>
+    <!-- Tabs at the top with icons -->
+    <div class="container-fluid tabs-container">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex align-items-center bg-light border-bottom py-2">
+                    <button id="navigate-left" class="btn btn-light"><i class="fas fa-chevron-left"></i></button> <!-- Scroll left -->
+                    <div class="tabs d-flex" id="tab-container" style="overflow-x: auto; white-space: nowrap;">
+                        <button id="add-tab" class="btn btn-outline-primary"><i class="fas fa-plus"></i></button> <!-- Add new tab -->
+                    </div>
+                    <button id="navigate-right" class="btn btn-light"><i class="fas fa-chevron-right"></i></button> <!-- Scroll right -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search bar -->
+    <div class="container-fluid search-container">
+        <div class="row justify-content-center py-3">
+            <div class="col-md-6">
+                <div class="search-bar d-flex align-items-center">
+                    <select id="search-engine" class="form-control"> <!-- Search engine options -->
+                        <option value="https://www.google.com/search?q=">Google</option>
+                        <option value="https://www.bing.com/search?q=">Bing</option>
+                        <option value="https://duckduckgo.com/?q=">DuckDuckGo</option>
+                    </select>
+                    <input type="text" id="search-input" class="form-control" placeholder="Search..." />
+                    <button class="btn btn-primary" id="search-button"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab content -->
+    <div class="container-fluid" style="background-color: #f0f2f5;"> <!-- Light background -->
+        <div class="row">
+            <div class="col-12">
+                <div class="tab-content p-3">
+                    <div class="content" data-tab="tab1">
+                        <iframe src="" frameborder="0" class="content-iframe"></iframe> <!-- Default content -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
